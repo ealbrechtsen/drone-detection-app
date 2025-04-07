@@ -1,5 +1,4 @@
 import { Text, View } from "react-native";
-import { Link } from "expo-router";
 
 export default function Home() {
   return (
@@ -10,7 +9,7 @@ export default function Home() {
         alignItems: "center",
       }}
     >
-      <Text>Home page</Text>
+      <Text>alarms</Text>
     </View>
   );
 }
