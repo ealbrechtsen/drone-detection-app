@@ -1,4 +1,4 @@
-// app/(tabs)/more.tsx
+// app/(tabs)/(more)/more.tsx
 
 import { StyleSheet, Text, View } from 'react-native'
 import { Link } from "expo-router";
@@ -6,11 +6,11 @@ import { Link } from "expo-router";
 export default function MoreTab() {
   return (
     <View style={styles.container}>
-      <Link href="/more/profile" asChild>
+      <Link href="/(tabs)/(more)/profile" asChild>
         <Text>Profile</Text>
       </Link>
 
-      <Link href="/more/settings" asChild>
+      <Link href="/(tabs)/(more)/settings" asChild>
         <Text>Settings</Text>
       </Link>
     </View>

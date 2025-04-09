@@ -1,3 +1,5 @@
+// app/(tabs)/(more)/(settings)/settings.tsx 
+
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
@@ -6,7 +8,7 @@ export default function Settings() {
     <View>
       <Text>Settings</Text>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({})

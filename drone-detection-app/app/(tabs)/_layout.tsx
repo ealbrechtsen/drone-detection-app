@@ -7,33 +7,34 @@ export default function TabLayout() {
     return (
         <Tabs screenOptions={{ tabBarActiveTintColor: 'blue' }}>
             <Tabs.Screen
-                name="index"
+                name="(home)"
                 options={{
                     title: 'Home',
                     tabBarIcon: ({ color }: TabBarIconProps) => (<Entypo size={28} name="home" color={color} />),
                 }}
             />
             <Tabs.Screen
-                name="map"
+                name="(map)"
                 options={{
                     title: 'Map',
                     tabBarIcon: ({ color }: TabBarIconProps) => (<Entypo size={28} name="map" color={color} />),
                 }}
             />
             <Tabs.Screen
-                name="statistic"
+                name="(statistic)"
                 options={{
                     title: 'Statistic',
                     tabBarIcon: ({ color }: TabBarIconProps) => (<Entypo size={28} name="bar-graph" color={color} />),
                 }}
             />
             <Tabs.Screen
-                name="more"
+                name="(more)"
                 options={{
-                    title: 'More',
+                    title: 'More', 
                     tabBarIcon: ({ color }: TabBarIconProps) => (<Entypo size={28} name="menu" color={color} />),
                 }}
             />
         </Tabs>
+        
     );
 }
