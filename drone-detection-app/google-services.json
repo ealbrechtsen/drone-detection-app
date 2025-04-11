@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "486570022223",
+    "project_id": "drone-detection-firebase",
+    "storage_bucket": "drone-detection-firebase.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:486570022223:android:e82208ce7763c0eeade13a",
+        "android_client_info": {
+          "package_name": "com.bsse.dronedetectionapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxWIUoxoy3AjOZZBV8NxyxyCq8N3z0dBw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
