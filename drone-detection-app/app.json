@@ -14,7 +14,6 @@
     "android": {
       "googleServicesFile": "./google-services.json",
       "package": "com.bsse.droneapp",
-
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
@@ -39,6 +38,14 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "ace54263-55b8-4100-afee-d91443780b02"
+      }
     }
   }
 }
