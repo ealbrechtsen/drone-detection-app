@@ -13,7 +13,7 @@
     },
     "android": {
       "googleServicesFile": "./google-services.json",
-      "package": "com.bsse.droneapp",
+      "package": "com.bsse.dronedetectionapp",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
