@@ -1,4 +1,6 @@
 import { View, Text, StyleSheet } from 'react-native';
+import { useEffect } from 'react';
+import { registerForPushNotificationsAsync } from '@/notifications/register';
 
 export default function Tab() {
   return (
@@ -7,6 +9,9 @@ export default function Tab() {
     </View>
   );
 }
+
+// kalder 
+useEffect (() => { registerForPushNotificationsAsync(); }, []);
 
 const styles = StyleSheet.create({
   container: {
