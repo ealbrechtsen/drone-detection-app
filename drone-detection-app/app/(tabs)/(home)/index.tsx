@@ -1,8 +1,13 @@
 import { View, Text, StyleSheet } from 'react-native';
 import { useEffect } from 'react';
-import { registerForPushNotificationsAsync } from '@/notifications/register';
+import { registerForPushNotificationsAsync } from '@/services/register';
 
-export default function Tab() {
+export default function HomeScreen() {
+  console.log('useEffect er aktiv i HomeScreen');
+  useEffect(() => {
+    registerForPushNotificationsAsync();
+  }, []);
+
   return (
     <View style={styles.container}>
       <Text>Her kommer alarmvisninger m.m.</Text>
@@ -10,8 +15,6 @@ export default function Tab() {
   );
 }
 
-// kalder 
-useEffect (() => { registerForPushNotificationsAsync(); }, []);
 
 const styles = StyleSheet.create({
   container: {

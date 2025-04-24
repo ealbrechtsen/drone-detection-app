@@ -1,4 +1,4 @@
-// notifications/register.ts
+// services/register.ts
 import * as Notifications from 'expo-notifications';
 import * as Device from 'expo-device';
 import { Platform } from 'react-native';
@@ -11,12 +11,13 @@ import { Platform } from 'react-native';
  * - The app must have permission to display notifications (either granted beforehand or requested by this function).
  *
  * Post-conditions:
- * - If permission is granted, a push token is generated and returned.
+ * - If permission is granted,  a push token is generated and returned.
  * - If permission is denied or device is unsupported, the function returns undefined.
  *
  * @returns The push token string if successful, otherwise undefined.
  */
 export async function registerForPushNotificationsAsync() {
+  console.log('RegisterForPushNotificationsAsync is called');
   let token;
 
   if (Device.isDevice) {

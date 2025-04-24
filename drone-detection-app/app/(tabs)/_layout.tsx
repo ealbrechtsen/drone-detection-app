@@ -1,6 +1,6 @@
 import Entypo from '@expo/vector-icons/Entypo';
 import { Tabs } from 'expo-router';
-import type { TabBarIconProps } from '../../types/navigation.d.ts';
+import type { TabBarIconProps } from '../../src/types/navigation.js';
 
 
 export default function TabLayout() {
