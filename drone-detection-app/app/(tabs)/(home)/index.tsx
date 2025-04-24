@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet } from 'react-native';
 import { useEffect } from 'react';
-import { registerForPushNotificationsAsync } from '@/services/register';
+import { registerForPushNotificationsAsync } from '@/services/pushNotifications';
 
 export default function HomeScreen() {
   console.log('useEffect er aktiv i HomeScreen');
