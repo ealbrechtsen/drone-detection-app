@@ -11,29 +11,30 @@ export default function DroneAlarmItem({ alarm }: { alarm: DroneAlarm }) {
             </Text>
 
             <Text style={styles.label}>
-                Tidspunkt: {new Date(alarm.Timestamp).toLocaleString()}
+                Timestamp: {new Date(alarm.Timestamp).toLocaleString()}
             </Text>
 
             <Text style={styles.label}>
-                Sikkerhed: {Math.round(alarm.Confidence * 100)}%
+                Confidence: {Math.round(alarm.Confidence * 100)}%
             </Text>
 
             <Text style={styles.label}>
                 Model: {alarm.ModelVersion}
             </Text>
-
-            <Text style={styles.label}>
-                Lokation: {alarm.location.lat}, {alarm.location.lon}
-            </Text>
-
+            
             <Text
                 style={styles.link}
                 onPress={() => {
-                    if (alarm.RecordingURL) Linking.openURL(alarm.recordingURL);
+                    if (alarm.RecordingURL) Linking.openURL(alarm.RecordingURL);
                 }}
             >
-                🎧 Play sound
+                🎧 Play
             </Text>
+
+            <Text style={styles.label}>
+                Location: {alarm.location.lat}, {alarm.location.lon}
+            </Text>
+
         </View>
 
     )
