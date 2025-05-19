@@ -12,14 +12,14 @@ export default function MoreStackLayout() {
         name="profile"
         options={{
           headerTitle: "Profile",
-          headerBackTitleVisible: false
+          // headerBackTitleVisible: false
         }}
       />
       <Stack.Screen
         name="settings"
         options={{
           headerTitle: "Settings",
-          headerBackTitleVisible: false
+          // headerBackTitleVisible: false
         }}
       />
     </Stack>

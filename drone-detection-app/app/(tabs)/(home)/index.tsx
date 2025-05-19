@@ -10,15 +10,15 @@ export default function HomeScreen() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  console.log('useEffect er aktiv i HomeScreen');
+  console.log('useEffect er active i HomeScreen');
   useEffect(() => {
     registerForPushNotificationsAsync();
 
     getDroneAlarm()
       .then(setAlarms)
       .catch((err) => {
-        console.error('Fejl ved hentning:', err);
-        setError('Kunne ikke hente alarmer.');
+        console.error('Error when get:', err);
+        setError('Could not get alarms.');
       })
       .finally(() => setLoading(false));
 
@@ -37,7 +37,7 @@ export default function HomeScreen() {
           renderItem={({ item }) => <DroneAlarmItem alarm={item} />}
           contentContainerStyle={styles.list}
           ListEmptyComponent={
-            <Text style={styles.text}>Ingen dronealarmer fundet.</Text>
+            <Text style={styles.text}>No drone alarms found.</Text>
           }
         />
       )}
