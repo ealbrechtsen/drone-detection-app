@@ -6,6 +6,7 @@ import { DroneAlarm } from '@/types/dronedetection';
 import DroneAlarmItem from '@/components/DroneAlarmItem';
 
 export default function HomeScreen() {
+  const [alarms, setAlarms] = useState <DroneAlarm[]> ([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -16,12 +17,18 @@ export default function HomeScreen() {
   const handleFetch = async () => {
     setLoading(true);
     setError(null);
+    try {
+      const data = await getDroneAlarm ();
+      setAlarms(data);
+    } catch (error) {
+      setError('Could not get alarms.');
+    }
     setLoading(false);
   };
 
   return (
     <View style={styles.container}>
-      <Button title="Hent alarmer" onPress={handleFetch} />
+      <Button title="Get dronealarms" onPress={handleFetch} />
       {loading ? (
         <ActivityIndicator size="large" />
       ) : error ? (
