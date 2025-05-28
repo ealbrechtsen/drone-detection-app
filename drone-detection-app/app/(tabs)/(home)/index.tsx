@@ -6,7 +6,6 @@ import { DroneAlarm } from '@/types/dronedetection';
 import DroneAlarmItem from '@/components/DroneAlarmItem';
 
 export default function HomeScreen() {
-  const [alarms, setAlarms] = useState<DroneAlarm[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
