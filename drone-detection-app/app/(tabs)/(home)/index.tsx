@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, FlatList, ActivityIndicator } from 'react-native';
+import { View, Text, StyleSheet, FlatList, ActivityIndicator, Button } from 'react-native';
 import { useEffect, useState } from 'react';
 import { registerForPushNotificationsAsync } from '@/services/pushNotifications';
 import { getDroneAlarm } from '@/services/droneAlarmApi';
@@ -7,25 +7,22 @@ import DroneAlarmItem from '@/components/DroneAlarmItem';
 
 export default function HomeScreen() {
   const [alarms, setAlarms] = useState<DroneAlarm[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  console.log('useEffect er active i HomeScreen');
   useEffect(() => {
     registerForPushNotificationsAsync();
-
-    getDroneAlarm()
-      .then(setAlarms)
-      .catch((err) => {
-        console.error('Error when get:', err);
-        setError('Could not get alarms.');
-      })
-      .finally(() => setLoading(false));
-
   }, []);
+
+  const handleFetch = async () => {
+    setLoading(true);
+    setError(null);
+    setLoading(false);
+  };
 
   return (
     <View style={styles.container}>
+      <Button title="Hent alarmer" onPress={handleFetch} />
       {loading ? (
         <ActivityIndicator size="large" />
       ) : error ? (
@@ -44,7 +41,6 @@ export default function HomeScreen() {
     </View>
   );
 }
-
 
 const styles = StyleSheet.create({
   container: {
