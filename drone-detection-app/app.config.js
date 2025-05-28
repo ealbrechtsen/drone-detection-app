@@ -55,5 +55,13 @@ export default ({ config }) => ({
       projectId: "ace54263-55b8-4100-afee-d91443780b02",
     },
     googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY,
+    apiUrl: process.env.API_URL,
+    apiSubscriptionKey: process.env.API_SUBSCRIPTION_KEY,
+    firebaseApiKey: process.env.FIREBASE_API_KEY,
+    firebaseAuthDomain: process.env.FIREBASE_AUTH_DOMAIN,
+    firebaseProjectId: process.env.FIREBASE_PROJECT_ID,
+    firebaseStorageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+    firebaseMessagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+    firebaseAppId: process.env.FIREBASE_APP_ID,
   },
 });

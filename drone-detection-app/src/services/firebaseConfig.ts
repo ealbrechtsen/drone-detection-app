@@ -5,12 +5,12 @@ import { initializeApp } from 'firebase/app';
 import { FirebaseApp } from 'firebase/app';
 
 const firebaseConfig = {
-  apiKey: "DIN_API_KEY",
-  authDomain: "drone-detection-firebase.firebaseapp.com",
-  projectId: "drone-detection-firebase",
-  storageBucket: "drone-detection-firebase.appspot.com",
-  messagingSenderId: "486570022223", 
-  appId: "1:486570022223:android:e82208ce7763c0eeade13a"
+  apiKey: process.env.FIREBASE_API_KEY,
+  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.FIREBASE_PROJECT_ID,
+  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.FIREBASE_APP_ID
 };
 
 export const firebaseApp : FirebaseApp = initializeApp(firebaseConfig);
